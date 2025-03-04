@@ -1,0 +1,40 @@
+@use 'variables' as v;
+
+@mixin min-sm{
+    @media (min-width: v.$min-sm) {
+        @content;
+    }
+}
+@mixin min-md{
+    @media (min-width: v.$min-md) {
+        @content;
+    }
+}
+@mixin min-lg{
+    @media (min-width: v.$min-lg) {
+        @content;
+    }
+}
+@mixin min-xl{
+    @media (min-width: v.$min-xl) {
+        @content;
+    }
+}
+
+@mixin contenedor{
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+@mixin grid($columns, $gap : 5rem){
+    display: grid;
+    grid-template-columns: repeat($columns,1fr);
+    gap: $gap;
+}
+
+@mixin resetear-lista{
+   margin: 0;
+   padding: 0;
+   list-style: none; 
+}
